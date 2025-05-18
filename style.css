@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 *{
     box-sizing: border-box;
 }
 
 body{
+    font-family: "Roboto", "sans-serif";
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     height: 100vh;
-    font-family: "Roboto", "sans-serif";
 }
-
 nav{
-    height: 100px;
+    height: 90px;
     width: 100%;
     position: absolute;
     top: 1px;
@@ -20,24 +21,23 @@ nav{
     margin: 0;
     display: flex;
     justify-content: space-evenly;
+    border-bottom: 1px solid #e0e0e0;
 }
 .logo{
     height: 100px;
 }
-
 .logo img{
-    height: 90px;
+    height: 80px;
     padding: 0;
     margin: 0;
     cursor: pointer;
 }
-.input {
+.input{
     margin-top: 30px;
     position: relative;
     width: 200px;
 }
-  
-.input input {
+.input input{
     width: 100%;
     padding: 5px 10px 5px 30px; /* space for the icon on the left */
     border: 1px solid #ccc;
@@ -46,9 +46,8 @@ nav{
     box-sizing: border-box;
     display: flex;
     text-align: center;
-}
-  
-.input i {
+}  
+.input i{
     position: absolute;
     left: 70px;
     top: 15px;
@@ -56,11 +55,6 @@ nav{
     color: #888;
     pointer-events: none;
 }
-
-.input i :focus{
-    visibility: hidden;
-}
-
 .right{
     height: 100px;
     width: 400px;
@@ -68,14 +62,338 @@ nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding-left: 20px;
+    padding-left: 90px;
     padding-bottom: 10px;
 }
-
 .circle{
     height: 20px;
     width: 20px;
     border: 1px solid black;
     border-radius: 20%;
     padding-left: 2px;
+}
+.right i{
+    cursor: pointer;
+}
+.fa-compass,.fa-comment,.fa-house,.fa-heart{
+    font-size: 20px;
+}
+
+.profile-pic{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-menu{
+  display: none;
+  position: absolute;
+  top: 45px;
+  right: 10;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  min-width: 150px;
+  z-index: 1000;
+}
+.dropdown-menu li a{
+  display: inline-block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+}
+.dropdown-menu :hover{
+    background-color: #f0f0f0;
+}
+#logout{
+    color: red;
+}
+.dropdown-menu li i{
+    height: 25px;
+    padding: 10px;
+}
+
+.following-story{
+    height: 120px;
+    width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.stories{
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+    text-align  : center;
+    bottom: 2px;
+    padding: 10px;
+}
+.stories img{
+    cursor: pointer;
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    border:3px  solid rgb(162, 69, 162) ;
+    border-spacing: 20px;
+    padding: 2px;
+    margin: 20px  auto;
+    text-align: center;
+}
+.name{
+    font-family: Times New Roman, sans-serif;
+    margin-top: 100px;
+    position: relative;
+    font-size: 20px;
+    color: #333;
+}
+.post{
+    height: 700px;
+    width: 52%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin-top: 45%;
+    position:absolute;
+    left: 160px;
+}
+.profile img{
+    height: 60px;
+    width: 100%;   
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-position: center;
+}
+.profile{
+    height: 100px;   
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+.profile h3{
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 20px 40px; 
+    font-size: 20px;
+}
+.profile p{
+    font-weight: bolder;
+    font-size: larger;
+    cursor: pointer;
+    height: 1rem;
+    position: relative;
+    left:55%;
+    top: 20%;
+}
+.picture{
+    height: 600px;
+    width: auto;
+    margin-bottom: 100px;
+}
+.picture-img{
+    height: 496px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+.like{
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+.like .fa-comment{
+    transform: scaleX(-1);
+}
+.like .fa-heart{
+    padding-right: 15px;
+    transition: color 0.1s;
+    cursor: pointer;
+}
+.like .liked{
+    color: red;
+}
+
+.like .bookmark-icon{
+    font-size: 24px;
+    padding: 2px;
+    background-color: transparent;
+    color: black;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-left: 75%;
+}
+
+.like .bookmark-icon.clicked{
+    background-color: black;
+    color: white;
+}
+
+.like .fa-paper-plane{
+    font-size: large;
+}
+.like .fa-regular{
+    padding-top: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.switch{
+    height: 90px;
+    width: 400px;
+    /* border: 2px solid black; */
+    display: flex;
+    position: absolute;
+    margin-left:57%;
+    margin-bottom: 12%;
+}
+.switch img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+.switch h2{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+.switch h3{
+    position: relative;
+    color: #888;
+    top: 25px;
+    right: 70px;
+}
+.switch p{
+    font-weight: bold;
+    font-size: large;
+    color: #0d86ba;
+    margin-left: 110px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+.suggestion{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+    margin-left: 60%;
+}
+.seeall{
+    position: relative;
+    height: 40px;
+    width: 90%;
+    display: flex;
+    bottom:130px;
+    right: 20px;
+    /* border: 1px solid black; */
+}
+.seeall h3{
+    color: #888;
+    position: relative;
+    /* bottom: 10px; */
+}
+.seeall h4{
+    color: #111;
+    position: relative;
+    left: 120px;
+    cursor:pointer;
+}
+.follow{
+    height: 500px;
+    width: 90%;
+    position: absolute;
+    /* border: 1px solid black; */
+    margin-top: 290px;
+    margin-right: 40px;
+}
+.ID{
+    height: 50px;
+    width: 100%;
+    position: relative;
+    /* border: 1px solid black; */
+    margin-top: 10px;
+    display: flex;
+}
+.ID img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+}
+.ID h3{
+    margin: 6px 5px;
+    height: 10px;
+    padding: 0;
+    position: relative;
+}
+.ID.one p,
+.ID.two p,
+.ID.three p,
+.ID.four p,
+.ID.five p{
+    position: relative;
+    top: 30px;
+    margin: 0;
+    color: #888;
+    position: absolute;
+}
+.ID.one p{
+    right: 153px;
+}
+.ID.two p{
+    right: 159px;
+}
+.ID.three p{
+    right: 133px;
+}
+.ID.four p{
+    right: 162px;
+}
+.ID.five p{
+    right: 155px;
+}
+.ID h4{
+    color: #0d86ba;
+    position: relative;
+    left: 120px;
+    bottom: 5px;
+    cursor: pointer;
+}
+.ID.two h4{
+    left: 130px;
+}
+.ID.three h4{
+    left: 145px;
+}
+.ID.four h4{
+    left: 125px;
+}
+.ID.five h4{
+    left: 115px;
+}
+.about{
+    /* border: 1px solid black; */
+    margin-top: 50px;
+}
+.about p{
+    color: #888;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

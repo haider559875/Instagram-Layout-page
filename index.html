@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="style.css">
-    <title>Insta Page</title>
+    <title>Instagram Page</title>
 </head>
 <body>
     <nav>
@@ -18,14 +18,137 @@
         </div>
 
         <div class="right">
-            <i class="fa-solid fa-house"></i>
-            <i class="fa-regular fa-comment"></i>
+            <i class="fa-sharp fa-solid fa-house"></i>
+            <i class="fa-regular fa-paper-plane"></i>
             <div class="circle">
                 <i class="fa-solid fa-plus"></i>
             </div>
+            <i class="fa-regular fa-compass"></i>
+            <i class="fa-regular fa-heart"></i>
+            
+            <div class="dropdown">
+                <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Profile" class="profile-pic" onclick="toggleDropdown()">
+                <ul class="dropdown-menu" id="dropdownMenu">
+                    <li>
+                        <i class="fa-regular fa-user"></i>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-gear"></i>
+                        <a href="#">Settings</a>
+                        </li>
+                    <li>
+                        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                        <a href="#" id="logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    
+
+    <div class="following-story">
+        <div class="stories ">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSz714VaPfXgPpkxtviC68sAN5ssN69pp4MIw&s" alt="">
+            <div class="name">chloeblu...</div>
+        </div>
+        
+        <div class="stories ">
+            <img src="https://images.unsplash.com/photo-1528907460462-5cc6fb2bdba5?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="name">ShadowLi...</div>
+        </div>
+
+        <div class="stories">
+            <img src="https://plus.unsplash.com/premium_photo-1688891564708-9b2247085923?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fHww" alt="">
+            <div class="name">ZaneK47...</div>
+        </div>
+
+        <div class="stories">
+            <img src="https://images.unsplash.com/photo-1571363971690-0a4fadaea4d1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9lcGxlfGVufDB8fDB8fHww" alt="">
+            <div class="name">AvaM102...</div>
+        </div>
+
+        <div class="stories">
+            <img src="https://images.unsplash.com/photo-1517012021249-a130aa959065?q=80&w=1409&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="name">Alex_097...</div>
+        </div>
+
+        <div class="stories">
+            <img src="https://images.unsplash.com/photo-1526257719984-af5118d67b6d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDI0fHx8ZW58MHx8fHx8" alt="">
+            <div class="name">Noah5621...</div>
+        </div>
+
+    </div>
+
+    <div class="post">
+        <div class="profile">
+            <div>
+                <img class="prfile-pic" src="https://images.unsplash.com/photo-1528907460462-5cc6fb2bdba5?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            </div>
+            <h3>ShadowLiam92</h3>
+            <p>...</p>
+        </div>
+        <div class="picture">
+            <img class="picture-img" src="https://images.unsplash.com/photo-1746974643797-03050c8b0213?q=80&w=1469&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <div class="like">
+                <i class="fa-regular fa-heart heart" onclick="toggleLike(this)"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+                <i class="fas fa-bookmark bookmark-icon" onclick="toggleBookmark(this)"></i>
+            </div>
+        </div>
+    </div>
+    <div class="switch">
+        <img src="https://images.unsplash.com/photo-1493238792000-8113da705763?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+
+        <h2>haider</h2>
+        <h3>haider</h3>
+        <p>Switch</p>
+    </div>
+
+    <div class="suggestion">
+        <div class="seeall">
+            <h3>Suggestions For You</h3>
+            <h4>See All</h4>
+        </div>
+        <div class="follow">
+            <div class="ID one">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/050/783/199/small/handsome-athletic-man-with-striking-blue-eyes-posed-for-a-portrait-photo.jpeg" alt="">
+                <h3>MarcusReed78</h3>
+                <p>Followed by Noah5621</p>
+                <h4>Follow</h4>                
+            </div>
+            <div class="ID two">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZabuQacU6ZQxexl8zKVF4BgtLqANrWRXeiA&s" alt="">
+                <h3>EthanBlake42</h3>
+                <p>Followed by AvaM102</p>
+                <h4>Follow</h4>
+            </div>
+            <div class="ID three">
+                <img src="https://images.unsplash.com/photo-1460904577954-8fadb262612c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Z2lybCUyMGV5ZXN8ZW58MHx8MHx8fDA%3D" alt="">
+                <h3>LilyEvans23</h3>
+                <p>Followed by chloeblue_07</p>
+                <h4>Follow</h4>
+            </div>
+            <div class="ID four">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfLO3Rj5M68bqEiYP78WUD6GVgoRSkxyiM2Q&s" alt="">
+                <h3>CalebHayes56</h3>
+                <p>Followed by Alex_097</p>
+                <h4>Follow</h4>
+            </div>
+            <div class="ID five">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuJsSX0EO_zl6WtMXDVKkU870Q17YSwohm8g&s" alt="">
+                <h3>MiaHamilton59</h3>
+                <p>Followed by AvaM102</p>
+                <h4>Follow</h4>
+            </div>
+            <div class="about">
+                <p>About .Help .Press .API .Jobs .Privacy .Terms .Location.Top Accounts .Hashtags .Language</p>
+                <p>© 2025 INSTAGRAM FROM FACEBOOK</p>
+            </div>
+        </div>
+    </div>
+
+
 </body>
 <script src="logic.js"></script>
 </html>
